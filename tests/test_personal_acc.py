@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 from locators import TestLocators
+from urls import Urls
 
 class TestPersonalAccount:
 
@@ -29,10 +30,10 @@ class TestPersonalAccount:
         driver.quit()
 
 
-    def test_out_from_personal_account(self, driver, mail, password):
+    def test_out_from_personal_account(self, driver):
         driver.get('https://stellarburgers.nomoreparties.site/login')
-        driver.find_element(*TestLocators.MAIL_INPUT).send_keys(mail)
-        driver.find_element(*TestLocators.PASSWORD_INPUT).send_keys(password)
+        driver.find_element(*TestLocators.MAIL_INPUT).send_keys(*Urls.mail)
+        driver.find_element(*TestLocators.PASSWORD_INPUT).send_keys(*Urls.password)
         driver.find_element(*TestLocators.SIGN_IN_BTN_LOGIN_PAGE).click()
         driver.find_element(*TestLocators.ACC_BTN_START_PAGE).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(

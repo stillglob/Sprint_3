@@ -41,7 +41,7 @@ class TestRegSuccess:
         driver.find_element(*TestLocators.INPUT_PASSWORD_REG_PAGE).send_keys('12345')
         driver.find_element(*TestLocators.SIGN_IN_BTN_LOGIN_PAGE).click()
 
-        assert driver.find_element(*TestLocators.PASSWORD_ERROR)
+        assert driver.find_element(*TestLocators.PASSWORD_ERROR).text == 'Некорректный пароль'
 
 
 
