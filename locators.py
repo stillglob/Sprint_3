@@ -14,7 +14,6 @@ class TestLocators:
     SAUCE_BTN = By.XPATH, "//section[1]/div[1]/div[2]"
     TOPPING_BTN = By.XPATH, "//section[1]/div[1]/div[3]"
     BRIDES_BTN = By.XPATH, "//section[1]/div[1]/div[1]"
-    selector_class_const = 'tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect'
     CONST_BTN = By.XPATH, '//ul/li[1]/a'
     LOGO_BTN = By.XPATH, '//header/nav/div'
     OUT_BTN = By.XPATH, '//ul/li[3]/button'

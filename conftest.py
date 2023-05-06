@@ -21,21 +21,6 @@ def make_password():
         password += r.choice(list(pass_bank))
     return password
 
-# @pytest.fixture
-# def selector():
-#     selector = 'tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect'
-#     return selector
-#
-# @pytest.fixture
-# def mail():
-#     mail = "otectestov1998@yandex.ru"
-#     return mail
-#
-# @pytest.fixture
-# def password():
-#     password = "samyichetkiyparol"
-#     return password
-
 @pytest.fixture
 def driver():
     driver = webdriver.Chrome()
